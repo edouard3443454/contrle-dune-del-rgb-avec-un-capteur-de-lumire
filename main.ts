@@ -26,15 +26,17 @@ function vert () {
 }
 basic.forever(function () {
     intensite = pins.analogReadPin(AnalogPin.P0)
-    if (intensite >= 700) {
+    if (intensite >= 800) {
         vert()
-    } else if (intensite < 700) {
+    } else if (intensite < 800 && intensite >= 600) {
         bleu()
-    } else if (intensite >= 300) {
+    } else if (intensite < 600 && intensite >= 400) {
         rouge()
-    } else if (intensite < 300 && intensite >= 75) {
+    } else if (intensite < 0 && false) {
         mauve()
-    } else {
+    } else if (false) {
         blanc()
+    } else {
+    	
     }
 })
